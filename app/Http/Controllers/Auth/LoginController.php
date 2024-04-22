@@ -51,6 +51,28 @@ class LoginController extends Controller
                 return redirect()->route('admin.home');
             }else if (auth()->user()->type == 'manager') {
                 return redirect()->route('manager.home');
+             }else if (auth()->user()->type == 'dosen') {
+                return redirect()->route('dosenHome');
+             }else if (auth()->user()->type == 'tendik') {
+                return redirect()->route('tendikHome');
+             }else if (auth()->user()->type == 'superadmin') {
+                return redirect()->route('superadminHome');
+             }else if (auth()->user()->type == 'admakademik') {
+                return redirect()->route('admakademikHome');
+             }else if (auth()->user()->type == 'admkeuangan') {
+                return redirect()->route('admkeuanganHome');
+             }else if (auth()->user()->type == 'direktur') {
+                return redirect()->route('direkturHome');
+             }else if (auth()->user()->type == 'wakil1') {
+                return redirect()->route('wakil1Home');
+             }else if (auth()->user()->type == 'wakil2') {
+                return redirect()->route('wakil2Home');
+             }else if (auth()->user()->type == 'wakil3') {
+                return redirect()->route('wakil3Home');
+             }else if (auth()->user()->type == 'admlppm') {
+                return redirect()->route('admlppmHome');
+             }else if (auth()->user()->type == 'admsdm') {
+                return redirect()->route('admsdmHome');
             }else{
                 return redirect()->route('home');
             }
